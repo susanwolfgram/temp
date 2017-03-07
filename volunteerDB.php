@@ -1,20 +1,20 @@
 <?php 
-phpinfo();
+
     // $dsn = 'dblib:dbname=VOLUNTEER_DB;host=IS-HAY04.ischool.uw.edu';
     // $user = 'INFO445';
     // $password = 'GoHuskies!';
     // $dbh = new PDO($dsn, $user, $password);
 
 
-// function getResults($sqlQuery) {
-// 	$db = new PDO("dblib:dbname=VOLUNTEER_DB;host=IS-HAY04.ischool.uw.edu", "INFO445", "GoHuskies!");
-// 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// 	$query = $db->query($sqlQuery);
-// 	return $query;  
-// }
-// $sqlQuery = "select * from tblVolunteer where volunteerID = 1";
+function getResults($sqlQuery) {
+	$db = new PDO("mysql:dbname=VOLUNTEER_DB;host=IS-HAY04.ischool.uw.edu", "INFO445", "GoHuskies!");
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$query = $db->query($sqlQuery);
+	return $query;  
+}
+$sqlQuery = "select * from tblVolunteer where volunteerID = 1";
 
-// getResults($sqlQuery);
+getResults($sqlQuery);
 // echo 'hello';
 // if (isset($_GET["foo"])) {
 // 	$sqlQuery = "select * from tblVolunteer where volunteerID = 1";
