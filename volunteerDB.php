@@ -7,7 +7,7 @@
 
 
 function getResults($sqlQuery) {
-	$db = new PDO("mysql:dbname=VOLUNTEER_DB;host=IS-HAY04.ischool.uw.edu", "INFO445", "GoHuskies!");
+	$db = new PDO("pgsql:dbname=VOLUNTEER_DB;host=IS-HAY04.ischool.uw.edu", "INFO445", "GoHuskies!");
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$query = $db->query($sqlQuery);
 	return $query;  
